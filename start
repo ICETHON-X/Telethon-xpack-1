@@ -5,7 +5,7 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "SONEXTELETHON" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL0pNVEhPTi1BUi9KTVRIT04tUEFDSy9hcmNoaXZlL21hc3Rlci56aXA" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1NPTkVYVGVsZXRob24vVGVsZXRob24teHBhY2svYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -15,7 +15,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL0pNVEhPTi1BUi9KTVRIT04tUEFDSy9hcmNoaXZlL21hc3Rlci56aXA" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1NPTkVYVGVsZXRob24vVGVsZXRob24teHBhY2svYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
     fi
 }
 
@@ -25,12 +25,12 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "SONEXTELETHON" ]]
     then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL0pNVEhPTi1BUi9KTS1USE9O=" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1NPTkVYVGVsZXRob24vVGVsZXRob24teHBhY2svYXJjaGl2ZS9tYXN0ZXIuemlw=" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL0pNVEhPTi1BUi9KTS1USE9O=" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1NPTkVYVGVsZXRob24vVGVsZXRob24teHBhY2svYXJjaGl2ZS9tYXN0ZXIuemlw=" | base64 -d`
     fi
     echo "$rlink"
 }
