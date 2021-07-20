@@ -1,7 +1,7 @@
-FROM JMTHON-AR/JM-THON:alpine
+FROM SONEXTELETHON/Telethon-x:alpine
 
 #clonning repo 
-RUN git clone https://github.com/JMTHON-AR/JM-THON.git /root/userbot
+RUN git clone https://github.com/SONEXTELETHON/Telethon-x.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
